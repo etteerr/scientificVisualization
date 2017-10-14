@@ -14,12 +14,12 @@ int entry(std::map<std::string, std::string>& arguments) {
 	end = atoi(arguments["-e"].c_str());
 	std::string filename = arguments["-f"];
 
-	//vtksys::SystemTools::ChangeDirectory(arguments["-d"]);
-
-	
-
+	/* Load files specified by arguments */
 	for (unsigned int i = start; i < end; i += step) {
+		/* Create reader*/
 		vtkSmartPointer<vtkStructuredPointsReader> reader = vtkSmartPointer<vtkStructuredPointsReader>::New();
+
+		/* Create filename */
 		char endfilename[4096];
 		sprintf_s(endfilename, 4096, filename.c_str(), i);
 		
@@ -27,8 +27,6 @@ int entry(std::map<std::string, std::string>& arguments) {
 		std::string fn;
 		fn.append(arguments["-d"]);
 		fn.append(endfilename);
-		//std::string fn =  vtksys::SystemTools::CollapseFullPath(endfilename);
-
 
 		/* Verbosity */
 		dprintf(dbglvl_NOTIFICATION, "loading %s...\n", fn.c_str());

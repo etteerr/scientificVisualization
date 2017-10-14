@@ -34,3 +34,6 @@
 #extra
 *.stackdump
 .vs/
+*.user
+SVVR_Flow/x64
+SVVR_Flow/SVVR_Flow/x64

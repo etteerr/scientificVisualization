@@ -12,6 +12,8 @@
 #include <cstdio>
 
 /********** vtk includes *********/
+/* Generic (application) */
+#include <vtkErrorCode.h>
 /* Generic (data) */
 #include <vtkSmartPointer.h>
 #include <vtkDataSetReader.h>

@@ -3,6 +3,7 @@
  */
 
 /* Project */
+#include "defines.h"
 
 /* Standard includes */
 #include <stdlib.h>
@@ -15,6 +16,16 @@
 #include <vtkSmartPointer.h>
 #include <vtkDataSetReader.h>
 #include <vtkDataSet.h>
+/* Legacy data readers */
+#include <vtkGenericDataObjectReader.h>
+#include <vtkStructuredGridReader.h>
+#include <vtkStructuredGridGeometryFilter.h>
+#include <vtkStructuredPoints.h>
+#include <vtkStructuredPointsReader.h>
+/* renderer */
+#include <vtkRenderWindow.h>
+#include <vtkRenderWindowInteractor.h>
+#include <vtkRenderer.h>
 /* XML */
 #include <vtkXMLReader.h>
 #include <vtkXMLUnstructuredGridReader.h>
@@ -26,6 +37,7 @@
 #include <vtkXMLStructuredGridReader.h>
 #include <vtkXMLImageDataReader.h>
 /* data types */
+#include <vtkPolyDataMapper.h>
 #include <vtkUnstructuredGrid.h>
 #include <vtkRectilinearGrid.h>
 #include <vtkHyperOctree.h>

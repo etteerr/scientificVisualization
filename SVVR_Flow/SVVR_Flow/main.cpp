@@ -31,7 +31,7 @@ int main(int nargs, char ** args) {
 
 	/* Halt execution till keypress */
 	if (res) {
-		printf("vtk_app exited with code %i\n", res);
+		dprintf(dbglvl_ERROR, "vtk_app exited with code %i\n", res);
 		getchar();
 	}
 	return res;

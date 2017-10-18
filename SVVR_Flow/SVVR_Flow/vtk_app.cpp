@@ -10,6 +10,8 @@ int entry(std::map<std::string, std::string>& arguments) {
 	if (loadDatasets(arguments))
 		return 1;
 
+	dprintf(dbglvl_VERBOSE, "Loaded %u datasets.\n", );
+
 	return 0;
 }
 

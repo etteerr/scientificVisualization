@@ -6,9 +6,6 @@
 #include "defines.h"
 
 /* Standard includes */
-#include <stdlib.h>
-#include <stdio.h>
-#include <Windows.h>
 #include <cstdio>
 
 /********** vtk includes *********/
@@ -51,3 +48,37 @@
 #include <vtkFieldData.h>
 #include <vtkCellTypes.h>
 #include <vtksys/SystemTools.hxx>
+
+/* Etc */
+#include <vtkOpenVRRenderer.h>
+#include <vtkOpenVRRenderWindow.h>
+#include <vtkOpenVRRenderWindowInteractor.h>
+
+#include <vtkHedgeHog.h>
+#include <vtkPolyDataMapper.h>
+#include <vtkActor.h>
+
+#include <vtkVectorNorm.h>
+#include <vtkSmartVolumeMapper.h>
+#include <vtkVolumeMapper.h>
+#include <vtkVolume.h>
+#include <vtkOpenVROverlay.h>
+#include <vtkErrorCode.h>
+#include <vtkMarchingCubes.h>
+#include <vtkPolyDataConnectivityFilter.h>
+
+#include "vtkOpenVRInteractorStyle.h"
+//#include "vtkNew.h"
+//#include "vtkObjectFactory.h"
+//#include "vtkOpenVRCamera.h"
+//#include "vtkPropPicker3D.h"
+#include <vtkTextureObject.h>
+
+#include <vtkMaskPoints.h>
+#include <vtkVolumeProperty.h>
+#include <vtkPiecewiseFunction.h>
+#include <vtkColorTransferFunction.h>
+#include <vtkGlyph3D.h>
+#include <vtkArrowSource.h>
+#include <vtkProperty.h>
+#include <vtkLookupTable.h>

@@ -16,7 +16,7 @@ int main(int nargs, char ** args) {
 	args_info["-e"] = "The fileformat end   number (%u)";
 	args_info["-j"] = "The fileformat step size (-s 1 -e 10 -j 3 => 1,4,7,10)";
 	/* Set default arguments  (Note: Not limited to these!) */
-	margs["-d"] = "D:\\VTK_FLOW_DATA\\";
+	margs["-d"] = "D:\\ErwinAndRyan\\flowdata\\";
 	margs["-f"] = "carotid-bifurcation.%u.vtk";
 	margs["-s"] = "7800";
 	margs["-e"] = "8000";
@@ -59,7 +59,8 @@ void parseArgs(int nargs, char** args, std::map<std::string, std::string> &amap,
 		switch (fchar) {
 		case '-':
 		case '/':
-			amap[string(args[i])] = string(args[++i]);
+			amap[string(args[i])] = string(args[i+1]);
+			i++;
 			break;
 		default:
 			amap["base"] = string(args[i]);
